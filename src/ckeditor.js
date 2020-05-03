@@ -29,8 +29,29 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter';
+import UnderLine from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+import SubScript from '@ckeditor/ckeditor5-basic-styles/src/subscript';
+import SuperScript from '@ckeditor/ckeditor5-basic-styles/src/superscript';
+import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
+import SpecialCharactersArrows from '@ckeditor/ckeditor5-special-characters/src/specialcharactersarrows';
+import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency';
+import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials';
+import SpecialCharactersLatin from '@ckeditor/ckeditor5-special-characters/src/specialcharacterslatin';
+import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-characters/src/specialcharactersmathematical';
+import SpecialCharactersText from '@ckeditor/ckeditor5-special-characters/src/specialcharacterstext';
 
-export default class ClassicEditor extends ClassicEditorBase {}
+
+
+
+
+
+
+
+export default class ClassicEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -56,7 +77,21 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	CodeBlock,
+	Font,
+	SimpleUploadAdapter,
+	UnderLine,
+	SubScript,
+	SuperScript,
+	Code,
+	SpecialCharacters,
+	SpecialCharactersArrows,
+	SpecialCharactersCurrency,
+	SpecialCharactersEssentials,
+	SpecialCharactersLatin,
+	SpecialCharactersMathematical,
+	SpecialCharactersText
 ];
 
 // Editor configuration.
@@ -68,6 +103,8 @@ ClassicEditor.defaultConfig = {
 			'bold',
 			'italic',
 			'link',
+			'code',
+			'underline',
 			'bulletedList',
 			'numberedList',
 			'|',
@@ -79,7 +116,13 @@ ClassicEditor.defaultConfig = {
 			'insertTable',
 			'mediaEmbed',
 			'undo',
-			'redo'
+			'redo',
+			'codeBlock',
+			'fontFamily',
+			'fontSize',
+			'fontColor',
+			'fontBackgroundColor',
+			'specialCharacters'
 		]
 	},
 	image: {
